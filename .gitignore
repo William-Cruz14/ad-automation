@@ -1,0 +1,85 @@
+# ==========================================
+# Segurança & Credenciais Sensíveis
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+certicate/
+certificates/
+certs/
+
+# ==========================================
+# Logs e Arquivos de Auditoria/Debug
+# ==========================================
+*.log
+src/logs/
+logs/
+*.sqlite
+*.sqlite3
+*.db
+
+# ==========================================
+# Python e Ambientes Virtuais
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Ambientes virtuais (Poetry, venv, virtualenv, pipenv, conda)
+.venv/
+venv/
+ENV/
+env/
+.env.bak/
+.venv*/
+
+# ==========================================
+# Testes & Cobertura
+# ==========================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.tox/
+
+# ==========================================
+# IDEs & Editores de Código
+# ==========================================
+.idea/
+.vscode/
+.junie/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
