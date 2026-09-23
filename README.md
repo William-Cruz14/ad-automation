@@ -157,7 +157,7 @@ DATABASE_URL=postgresql+asyncpg://postgres:sua_senha@localhost:5432/ad_automatio
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/AD-Automation-Python.git
+git clone https://github.com/William-Cruz14/ad-automation.git
 cd AD-Automation-Python
 ```
 
@@ -323,7 +323,8 @@ poetry run pytest -v -s
 
 ## 👤 Autor
 
-Desenvolvido por **William Cruz**  
+Desenvolvido por **William-Cruz14**
+- GitHub: [William-Cruz14](https://github.com/William-Cruz14)
 - E-mail: [cruzwilliam14@gmail.com](mailto:cruzwilliam14@gmail.com)
 
 ---
