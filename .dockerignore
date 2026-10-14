@@ -1,0 +1,27 @@
+# Ambientes virtuais
+.venv/
+venv/
+
+# Configurações sensíveis (nunca na imagem!)
+.env
+*.pem
+*.key
+
+# Cache e artefatos
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# IDE e SO
+.vscode/
+.idea/
+.DS_Store
+
+# Testes (não vão para produção)
+tests/
+pytest.ini
+
+# Git
+.git/
+.gitignore

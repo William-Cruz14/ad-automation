@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from fastapi.concurrency import run_in_threadpool
-from schemas.schema_auth import LoginRequest
-from services.auth_service import authenticate
+from src.schemas.schema_auth import LoginRequest
+from src.services.auth_service import authenticate
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 

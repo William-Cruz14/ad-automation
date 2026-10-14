@@ -1,7 +1,8 @@
-import logging
 import sys
 from pathlib import Path
-app = Path(__file__).parent.parent / "logs" / "app.log"
+
+from loguru import logger
+
 
 def get_logger(name: str):
     """
@@ -10,23 +11,35 @@ def get_logger(name: str):
         name (str): O nome do logger.
 
     """
-    fmt = logging.Formatter(
-        "{asctime} - {levelname} - {name} - {message}",
-        style="{",
-        datefmt="%d/%m/%Y %H:%M"
+    logger.remove()
+
+    logger.add(
+        sys.stderr,
+        format=(
+            "[<green>{time:DD-MM-YYYY HH:mm:ss}</green>] >> "
+            "<yellow>{level}</yellow> >> "
+            "<level>{name}:{line}</level> >> "
+            "<cyan>{message}</cyan>"
+        ),
+        level="INFO",
+        colorize=True,
+        serialize=True
     )
 
-    file_handler = logging.FileHandler(app, encoding="utf-8")
-    file_handler.setFormatter(fmt)
+    log_dir = Path(__file__).parent.parent / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
 
-    console_handler = logging.StreamHandler(sys.stdout)
-    console_handler.setFormatter(fmt)
-    logging.basicConfig(
-        level=logging.INFO,
-        handlers=[file_handler, console_handler]
-    )
+    logger.add(
+        log_dir / "ad-automation.log",
+        rotation="5 MB",
+        retention="7 days",
+        compression="zip",
+        format="{time:YYYY-MM-DD HH:mm:ss} >> {level} >> {name}:{function}:{line} >> "
+               "{message}",
+        level="DEBUG",
+        )
 
-    return logging.getLogger(name)
+    return logger
 
 if __name__ == "__main__":
     logger = get_logger(__name__)

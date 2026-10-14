@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from models.audit_model import AuditLog, ActionEnum
-from utils.logging_provider import get_logger
+from src.models.audit_model import AuditLog, ActionEnum
+from src.utils.logging_provider import get_logger
 
 logger = get_logger(__name__)
 

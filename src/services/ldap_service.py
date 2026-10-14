@@ -1,12 +1,12 @@
 from ldap3 import Server, Connection, ALL, Tls, MODIFY_REPLACE
 from ldap3.utils.conv import escape_filter_chars
 from ldap3.core.exceptions import LDAPException, LDAPInvalidCredentialsResult, LDAPSocketOpenError
-from core.exceptions import *
-from schemas.schema_user import UserCreate, UserResponse, ActivateUserResponse
-from utils.logging_provider import get_logger
+from src.core.exceptions import *
+from src.schemas.schema_user import UserCreate, UserResponse, ActivateUserResponse
+from src.utils.logging_provider import get_logger
 import ssl
 from decouple import config
-from utils.secret_passwd import get_random_password
+from src.utils.secret_passwd import get_random_password
 
 AD_SERVER = config('AD_SERVER')
 BASE_DN = f"DC={AD_SERVER.split('.')[1]},DC={AD_SERVER.split('.')[-1]}"

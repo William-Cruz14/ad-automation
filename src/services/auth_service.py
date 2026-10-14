@@ -1,7 +1,7 @@
-from schemas.schema_auth import TokenResponse, LoginRequest
+from src.schemas.schema_auth import TokenResponse, LoginRequest
 from fastapi import HTTPException
 import jwt
-from services.ldap_service import validate_ldap_credentials
+from src.services.ldap_service import validate_ldap_credentials
 from datetime import datetime, timedelta, timezone
 from decouple import config
 

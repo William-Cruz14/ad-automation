@@ -10,7 +10,7 @@
 *.cer
 *.p12
 *.pfx
-certicate/
+certificate/
 certificates/
 certs/
 

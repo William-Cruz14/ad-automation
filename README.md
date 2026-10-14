@@ -110,7 +110,7 @@ Antes de iniciar, certifique-se de ter instalado em seu ambiente:
 
 > ⚠️ **IMPORTANTE - SEGURANÇA EM PRIMEIRO LUGAR:**
 > - **NUNCA** envie seu arquivo `.env`, certificados reais (`.cer`, `.pem`, `.key`) ou credenciais administrativas para repositórios públicos ou de controle de versão (GitHub, GitLab, etc.).
-> - O arquivo `.gitignore` já está pré-configurado para ignorar `.env`, arquivos de certificado (`certicate/`, `*.cer`, `*.pem`, `*.key`) e logs (`src/logs/app.log`).
+> - O arquivo `.gitignore` já está pré-configurado para ignorar `.env`, arquivos de certificado (`certificate`, `*.cer`, `*.pem`, `*.key`) e logs (`src/logs/app.log`).
 > - Utilize o arquivo `.env.example` como base para configurar o seu ambiente local de forma segura.
 
 Crie uma cópia do `.env.example` nomeada como `.env` na raiz do projeto e preencha com suas configurações reais:

@@ -4,13 +4,13 @@ from fastapi.exceptions import HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette.concurrency import run_in_threadpool
 
-from core.exceptions import *
-from core.database import get_db
-from utils.logging_provider import get_logger
-from services import ldap_service, audit_service
-from services.audit_service import create_audit_log, ActionEnum
-from core.security import get_current_user
-from schemas.schema_user import UserCreate, UserResponse, ActivateUserResponse
+from src.core.exceptions import *
+from src.core.database import get_db
+from src.utils.logging_provider import get_logger
+from src.services import ldap_service, audit_service
+from src.services.audit_service import create_audit_log, ActionEnum
+from src.core.security import get_current_user
+from src.schemas.schema_user import UserCreate, UserResponse, ActivateUserResponse
 
 logger = get_logger(__name__)
 
